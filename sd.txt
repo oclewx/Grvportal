@@ -1,0 +1,3 @@
+    "emailid": "sahilbfna9@gmail.com",
+    "mobileno": "8058199371",
+    "password": "$2a$10$KvqmZiylGZapNrfce7rC6Ol/0Wk9CQmDTsjgj6dWCgU6TQpkU4CDu",

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="HandheldFriendly" content="true">
+	<title>AGC</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular-route.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">-->
+	<link rel="stylesheet" type="text/css" href="/stylesheets/home.css">
+</head>
+<body ng-app="">
+
+	<div class="image" id="home">
+
+		<div class="heading">
+			<img src="../images/a.png" height="12%" width="40%"><br>
+			<h1>Grievance Redressal Portal</h1>
+
+		<div class="forms">
+
+	    <div id="1l" class="login login-register">
+	       	<h3>Admin Login</h3>
+        	<form method="post" action="/Admin/login">
+	   			<input type="text" placeholder="Enter Username" name="id"  />
+	     		<input type="password" placeholder="Enter Password" name="password"  /><br>
+	      		<button type="submit">Login</button><br>
+	     		<span style="position: relative; float: left;"><input type="checkbox" id="check"> Remember me</span><br>
+	      		<a href="#">Forgot Password ?</a>
+  			</form>
+        </div>
+
+	    <div id="2l" class="login login-register">
+	       	<h3>Management Login</h3>
+        	<form method="post" action="/mngmnt/login">
+	   			<input type="text" placeholder="Enter Username" name="id"  />
+	     		<input type="password" placeholder="Enter Password" name="password"  /><br>
+	      		<button type="submit">Login</button><br>
+	     		<span style="position: relative; float: left;"><input type="checkbox" id="check"> Remember me</span><br>
+	      		<a href="#">Forgot Password ?</a>
+  			</form>
+        </div>
+
+	    <div id="3l" class="login login-register">
+	       	<h3>Faculty Login</h3>
+        	<form method="post" action="/faculty/login">
+	   			<input type="text" placeholder="Enter Username" name="id"  />
+	     		<input type="password" placeholder="Enter Password" name="password"  /><br>
+	      		<button type="submit">Login</button><br>
+	     		<span style="position: relative; float: left;"><input type="checkbox" id="check"> Remember me</span><br>
+	      		<a href="#">Forgot Password ?</a><br>
+	      		<span style="position: relative; float: left;"> New Member? <a id="r3">Register</a></span>
+  			</form>
+        </div>
+        <div id="3r" class="register login-register">
+         	<h3>Faculty Registration</h3>
+        	<form method="post" action="/faculty/register" enctype="multipath/form-data">
+				<input name="name" class="form-control" type="text" placeholder="Enter Name">
+				<input type="text" placeholder="Enter Email" name="email"  />
+				<input type="text" placeholder="Enter mobile no" name="Mobile"  />
+				<label>Gender</label>
+			   <select name="gender" type="text">
+			   <option value="M" >MALE</option>
+			   <option value="F">FEMALE</option>
+			   <option value="O">OTHERS</option>      
+			   </select>
+			   <label>Department</label>
+               <select name="dep" type="text" >
+               <option value="First year">First_Year</option>
+               <option value="CS" >CS</option>
+               <option value="ME">ME</option>
+               <option value="EC">EC</option>      
+               <option value="EE">EE</option>
+               <option value="CE">CE</option>
+			   </select>
+			   <input name="Desig" class="form-control" type="text" placeholder="Enter Designation">
+		       <input type="text" placeholder="Enter Employee id" name="id"  />
+		       <input type="password" placeholder="Enter Password" name="password"  />
+		       <input type="password" placeholder="Re-enter Password" name="password2"  />
+		       <button type="submit">Register</button>
+  			</form>
+        </div>
+
+	    <div id="4l" class="login login-register">
+	       	<h3>Grievance Cell Staff Login</h3>
+        	<form method="post" action="/Members/login">
+	   			<input type="text" placeholder="Enter Username" name="id"  />
+	     		<input type="password" placeholder="Enter Password" name="password"  /><br>
+	      		<button type="submit">Login</button><br>
+	     		<span style="position: relative; float: left;"><input type="checkbox" id="check"> Remember me</span><br>
+	      		<a href="#">Forgot Password ?</a>
+  			</form>
+        </div>
+
+	    <div id="5l" class="login login-register">
+	       	<h3>Student Login</h3>
+        	<form method="post" action="/Student/login">
+	   			<input type="text" placeholder="Enter Username" name="id"  />
+	     		<input type="password" placeholder="Enter Password" name="password"  /><br>
+	      		<button type="submit">Login</button><br>
+	     		<span style="position: relative; float: left;"><input type="checkbox" id="check"> Remember me</span><br>
+	      		<a href="#">Forgot Password ?</a><br>
+	      		<span style="position: relative; float: left;"> New Member? <a id="r5">Register</a></span>
+  			</form>
+        </div>
+        <div id="5r" class="register login-register">
+        	<h3>Student Registration</h3>
+        	<form method="post" action="/Student/register" enctype="multipath/form-data">
+				<input type="text" placeholder="Enter name" name="name"  />
+				<input type="text" placeholder="Enter Email" name="email"  />
+			   <input type="text" placeholder="Enter course completion date" name="cdate"/>
+			   <label>Gender</label>  
+			   <select name="gender" type="text">
+				<option value="M" >MALE</option>
+				<option value="F">FEMALE</option>
+				<option value="O">OTHERS</option>      
+				
+			   </select>
+			   <input type="text" placeholder="Enter mobile no" name="Mobile"  />
+			   <input type="text" placeholder="Enter college id" name="id"  />
+			   <label>Department</label>
+               <select name="dep" type="text" >
+               <option value="First year">First_Year</option>
+               <option value="CS" >CS</option>
+               <option value="ME">ME</option>
+               <option value="EC">EC</option>      
+               <option value="EE">EE</option>
+               <option value="CE">CE</option>
+			   </select>
+			   <label>batch/class</label>
+               <select name="batch" type="text" >
+               <option value="First year">First_Year</option>
+               <option value="Second year" >Second year</option>
+               <option value="Third year">Third year</option>
+               <option value="Final year">Final year</option>     
+               </select>
+		       <input type="password" placeholder="Enter Password" name="password"  />
+		       <input type="password" placeholder="Re-enter Password" name="password2"  />
+		       <button type="submit">Register</button>
+  			</form>
+        </div>
+
+	    <div id="6l" class="login login-register">
+	       	<h3>Parent Login</h3>
+        	<form method="post" action="/Parent/login">
+	   			<input type="text" placeholder="Enter Username" name="id"  />
+	     		<input type="password" placeholder="Enter Password" name="password"  /><br>
+	      		<button type="submit">Login</button><br>
+	     		<span style="position: relative; float: left;"><input type="checkbox" id="check"> Remember me</span><br>
+	      		<a href="#">Forgot Password ?</a><br>
+	      		<span style="position: relative; float: left;"> New Member? <a id="r6">Register</a></span>
+  			</form>
+        </div>
+        <div id="6r" class="register login-register">
+        	<h3>Parent Registration</h3>
+        	<form method="post" action="/Parent/register" enctype="multipath/form-data">
+				<input type="text" placeholder="Enter name" name="name"  />
+			   <input type="text" placeholder="Enter Email" name="email"  />
+			   <input type="text" placeholder="Enter course completion date" name="cdate"  />
+		       <input type="text" placeholder="Enter relation" name="relation"  />
+		       <input type="text" placeholder="Enter mobile number" name="Mobile"  />
+		       <input type="password" placeholder="Enter Password" name="password"  />
+		       <input type="password" placeholder="Re-enter Password" name="password2"  />
+		       <button type="submit">Register</button>
+  			</form>
+        </div>
+
+	    <div id="7l" class="login login-register">
+	       	<h3>Non Teaching Staff Login</h3>
+        	<form method="post" action="/staff/login">
+	   			<input type="text" placeholder="Enter Username" name="id"  />
+	     		<input type="password" placeholder="Enter Password" name="password"  /><br>
+	      		<button type="submit">Login</button><br>
+	     		<span style="position: relative; float: left;"><input type="checkbox" id="check"> Remember me</span><br>
+	      		<a href="#">Forgot Password ?</a><br>
+	      		<span style="position: relative; float: left;"> New Member? <a id="r7">Register</a></span>
+  			</form>
+        </div>
+        <div id="7r" class="register login-register">
+        	<h3>Non-Teaching Staff Registration</h3>
+        	<form method="post" action="/staff/register">
+		       <input type="text" placeholder="Enter Email" name="email"/>
+			   <input type="text" placeholder="Enter Mobile no" name="Mobile"/>
+			   <label>Gender</label>
+			   <select name="gender" type="text">
+				<option value="M" >MALE</option>
+				<option value="F">FEMALE</option>
+				<option value="O">OTHERS</option>      
+			   </select>	
+			   <label>Department</label>
+               <select name="dep" type="text" >
+               <option value="First year">First_Year</option>
+               <option value="CS" >CS</option>
+               <option value="ME">ME</option>
+               <option value="EC">EC</option>      
+               <option value="EE">EE</option>
+               <option value="CE">CE</option>
+			   </select>
+			   <input name="id" type="text" placeholder="Enter EmployeeID">
+	           <input name="Desig" type="text" placeholder="Enter Designation">
+		       <input type="text" placeholder="Enter staff name" name="name"  />
+		       <input type="password" placeholder="Enter Password" name="password"  />
+		       <input type="password" placeholder="Re-enter Password" name="password2"  />
+		       <button type="submit">Register</button>
+  			</form>
+        </div>
+
+		</div>
+		</div>
+
+		<div class="options" id="options">
+
+			<ul>
+				<li id="admin" class="btn 1">Admin</li>
+				<li id="management" class="btn">Management</li>
+				<li id="faculty" class="btn">Faculty</li>
+				<li id="grievance_cell_staff" class="btn">Grievance Cell Staff</li>
+				<li id="student" class="btn">Student</li>
+				<li id="parent" class="btn">Parent</li>
+				<li id="nonteaching" class="btn">Non-Teaching</li>
+			</ul>
+
+		</div>
+		<div class="head">
+			<div id="head">
+				<div class="open fa fa-bars" style="float: right; margin-right: .5rem;"></div>
+				<a href="#home" id="home-page" class="btnh under-dot">Home</a>
+				<a href="#about-us" id="about" class="btnh">About Us</a>
+				<a href="#contact-page" id="contact" class="btnh">Contact</a>
+			</div>
+				<div class="icons hide">
+					<a href="https://twitter.com/AnandcollegeEng" class="fa fa-twitter" target="_blank"></a>
+					<a href="https://www.youtube.com/channel/UCAcHeVvVgwRx7wSWw69RgYg/" class="fa fa-youtube-play" target="_blank"></a>
+					<a href="https://www.pinterest.com/anandice/" class="fa fa-pinterest-p" target="_blank"></a>
+					<a href="https://plus.google.com/u/1/114413981688380933224" class="fa fa-google" target="_blank"></a>
+					<a href="https://www.facebook.com/Anand-International-College-of-Engineering-Jaipur-789735534445909/" class="fa fa-facebook" target="_blank"></a>
+					<a href="https://www.instagram.com/anandcollege.eng/" class="fa fa-instagram" target="_blank"></a>
+					<span>Follow Us</span>
+				</div>
+			</div>
+	</div>
+
+	<div class="info" id="about-us"><br><br>
+	<h1>About Us...</h1>
+	
+	<div class="information">
+	<h3>“Be Acknowledged Globally for Value based Education & Innovation in Service of Humankind”</h3>
+The Anand International College of Engineering (Anand-ICE),   approved     by AICTE and affiliated to RTU, Kota is established at India’s Pink City-Jaipur  in year 2010. Since its inception, the institute persists its credentials  of  joyous teaching-learning environs of global standards and offers B.Tech. degree programme in five engineering disciplines i.e. Civil, Computer Science, Electrical, Electronics & Communication, and Mechanical Engineering. The institute nurtures intellectually inspiring Academic Environment at lush-green landscaped campus with state-of-the-art infrastructure.<br><br>
+
+The Anand-ICE has been distinguished for its qualitative teaching-learning processes that place it among the best emerging engineering institutions of India (Times of India). The Anand family comprises eminent academicians & scientists as faculty who also extend Academic parenting to the students. The family further broadens its intellectual arena by bringing internationally renowned professionals on board for achieving higher mark of academic intelligence.<br>
+The institute with Anand Edge, empowers students to redesign their curriculum through unique FSBT4 while facilitating students to not only deeply understand the fundamentals of engineering sciences but also train to obtain sustainable solutions of real-life problems.
+The institute extends strategic partnerships with various renowned foreign universities for exposing students through Abroad Training Programme. The institute also encourages the students to incubate their innovative concepts in order to foster new ventures.<br>
+The campus enriches students with diverse range of competencies through 390o evolving processes and gears them up to respond to the challenges of every aspect of life and compete globally.<br>
+The success of our students in the wider world itself speaks for them. Join us and be part of stream of success!
+
+	</div>
+</div>
+
+	<div class="info" id="contact-page"><br><br>
+		<h1>Contact Us...</h1>
+
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16568.274592791873!2d75.96131806715803!3d26.861588901074704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db8be74c25e59%3A0x675325c0c46956fc!2sAnand+International+College+of+Engineering!5e0!3m2!1sen!2sin!4v1536426536774" allowfullscreen></iframe><br>
+	
+	<div class="information">
+		For Further Information Visit Us<br><br>
+
+Phone: 01429- 234994, 95<br>
+Mobile: 9928755552, 9928755553<br>
+Fax: 01429- 234994<br><br>
+
+Email<br>
+info@anandice.ac.in<br><br>
+
+College Address:<br>
+Anand International College of Engineering<br>
+Near Kanota, Agra Road, Jaipur<br><br>
+
+Corporate Office Address:<br>
+
+D-40, Shanti path, Jawahar Nagar, Jaipur<br>
+Phone : 0141-2600231, 4109030<br><br>
+
+Admissions<br>
+
+Er. Vivek Bhojak<br>
+
+admissions@anandice.ac.in<br>
+
++91 9694097812, 91 9694097811, +91 9694097810<br><br>
+
+ 
+
+Examination<br>
+
+Prof. Sanjana Chugh<br>
+
+exam@anandice.ac.in<br><br>
+
+Campus Manager<br>
+
+Mr. Ramesh Gupta<br>
+
+ramesh.gupta@anandice.ac.in<br>
+
++91 9694097813<br><br>
+
+ 
+
+HR & Recruitment<br>
+
+Ms. Pooja Dashora<br>
+
+career@anandice.ac.in<br><br>
+
+Transport<br>
+
+Mr. Vinod Saini<br>
+
+Vinod.saini@anandice.ac.in<br>
+
++91 9116035847<br><br>
+
+ 
+
+Hostel & Maintenance<br>
+
+Mr. Saurabh Pareek<br>
+
+Saurabh.pareek@anandice.ac.in<br><br>
+	</div>
+
+	</div>
+	
+	<div id="totop" class="fa fa-arrow-up" title="Back To Top"></div>
+
+</body>
+
+	<script src="/javascripts/jquery.js"></script>
+	<script src="/javascripts/home.js"></script>
+
+</html>

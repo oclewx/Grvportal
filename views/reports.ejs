@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<title>Dashboard</title>
+		<script type="text/javascript" src="/javascripts/jquery.js"></script>
+		<script type="text/javascript" src="/s/ds.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script type="text/javascript" src="/s/angular-route.min.js"></script>
+		<script type="text/javascript" src="/s/dash.js"></script>
+		<!--<script type="text/javascript" src="/s/controllers.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/s/dash-grievances.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-myaccount.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-reset-password.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-post.css">
+	</head>
+	<body ng-app="grievances">
+
+		<div id="total" class="total">
+
+			<div id="header" class="header">
+				<div id="heading" class="heading">
+					<h4>GRIEVANCE PORTAL || ANAND INTERNATIONAL COLLEGE OF ENGINEERING</h4>
+				</div>
+
+			</div>
+			
+			<div id="face" class="face">
+				<nav id="nav_bar" class="nav_bar">
+					<h1>Hi,</h1>
+					<ul>               <form>
+		                <li><a href="/Student/my-account"><label class="fas fa-user"></label> My Account</a></li>
+	                    <li><a href="/Student/password_reset"><label class="fas fa-key"></label> Password Reset</a></li>
+	                    <li><a href="/Student/Home" ><label class="far fa-comments"></label>My Grievances</a></li>
+	                    <li><a href="/Student/post" ><label class="fa fa-envelope"></label>Post A Grievance</a></li>
+	                    <li>
+	                    	<a id="report" href="/Student/reports"><label class="fas fa-book"></label>  Reports</a>
+		                    <div class="reports">
+		                    	<ul>
+		                    		<li>Report1</li>
+		                    		<li>Report2</li>
+		                    		<li>Report3</li>
+		                    		<li>Report4</li>
+		                    	</ul>
+		                    </div>
+	                    </li>
+	                </ul>
+				</nav>
+					
+			</div>
+
+			<div class="content" >
+                    <h1>Report Name</h1>
+
+                    <div class="details">
+                        <table>
+                            <tr>
+                                <td>From Date</td>
+                                <td><input type="date" name="from-date" value="2018-10-10"></td>
+                            </tr>
+                            <tr>
+                                <td>To Date</td>
+                                <td><input type="date" name="to-date" value="2018-10-10"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><a href="">Create</a></td>
+                            </tr>
+                        </table>
+                    
+                    </div>
+				
+
+			</div>
+
+			</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,37 @@
+<h1><%= title%> HomePage!!</h1>
+<h1>Login Successful</h1>
+<form action='/logout'>
+    <button type="submit">Logout</button>
+</form>
+<form  action='/Admin/create'>
+    <button type="submit">create cell member</button>
+</form>
+<form  action='/Admin/grvtype_add'>
+    <button type="submit">create new grievance type</button>
+</form>
+<form action="/Admin">
+    <div class="dropdown">
+    <div class="dropdown-content">
+        Approved Request<br>
+      <a href="approve/?type=Student&status=approved">student</a><br>
+      <a href="approve/?type=Parent&status=approved">Parent</a><br>
+      <a href="approve/?type=faculty&status=approved">faculty</a><br>
+      <a href="approve/?type=staff&status=approved">staff</a>
+    </div>
+    <div class="dropdown-content">
+            Pending Request<br>
+          <a href="approve/?type=Student&status=verified">student</a><br>
+          <a href="approve/?type=Parent&status=verified">Parent</a><br>
+          <a href="approve/?type=faculty&status=verified">faculty</a><br>
+          <a href="approve/?type=staff&status=verified">staff</a>
+        </div>
+        <div class="dropdown-content">
+                Rejected Request<br>
+              <a href="approve/?type=Student&status=rejected">student</a><br>
+              <a href="approve/?type=Parent&status=rejected">Parent</a><br>
+              <a href="approve/?type=faculty&status=rejected">faculty</a><br>
+              <a href="approve/?type=staff&status=rejected">staff</a>
+            </div>
+</div>
+
+</form>

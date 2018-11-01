@@ -1,0 +1,29 @@
+.details{
+	width: 100%;
+}
+
+.details table{
+	margin-bottom: .5rem;
+}
+
+.details table td{
+	width: 55%;
+	height: 3rem;
+	padding-left: 2rem;
+}
+
+.details table a{
+	border: .05rem solid #aaa;
+	border-radius: .5rem;
+	padding: .5rem;
+}
+
+.details table input[type=text]{
+	width: 300%;
+	padding: .3rem;
+}
+
+button{
+	border: 0;
+	background-color: #f2f2f2;
+}

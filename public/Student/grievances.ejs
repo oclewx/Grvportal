@@ -1,0 +1,55 @@
+<!--Student-->
+<div class="content" ng-app="grievances" ng-controller="Student_grievances">
+        <h1>Grievance Details</h1>
+<div class="showentries">
+Show <select name="entry" type="text" >
+<option value="10">10</option>
+<option value="20" >20</option>
+<option value="100">50</option>
+<option value="100">100</option>
+</select> Entries
+</div>
+
+<div class="search">
+Search: <input type="text" name="search">
+</div>
+
+<div class="content-table">
+<table>
+<tr>
+<td>S. No.</td>
+<td>Grievance No.</td>
+<td>Grievance Type</td>
+<td>Subject</td>
+<td>Grievance</td>
+<td>Status</td>
+<td>Action</td>
+</tr> 
+<tr ng-repeat="result in result">
+                <td>{{$index}}</td>
+                <td>{{result.grv_id}}</td>
+                <td>{{result.Gtype}} </td>
+                <td>{{result.subject}}</td>
+                <td>{{result.Grv}}</td>
+                <td>{{result.status}}</td>
+                <td>{{result.reply}}</td>
+                </tr>
+</table>
+</div>
+
+<div class="content-table-data">
+<table>
+ 
+                </table>
+                
+
+</div>
+<div class="nav-button">
+<a>Previous</a>
+<a>Next</a>
+</div>
+
+
+    </div>
+
+    </div>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<title>Dashboard</title>
+		<script type="text/javascript" src="/javascripts/jquery.js"></script>
+		<script type="text/javascript" src="/s/ds.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script type="text/javascript" src="/s/angular-route.min.js"></script>
+		<script type="text/javascript" src="/s/dash.js"></script>
+		<!--<script type="text/javascript" src="/s/controllers.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/s/dash-grievances.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-myaccount.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-reset-password.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-post.css">
+	</head>
+	<body ng-app="grievances">
+
+		<div id="total" class="total">
+
+			<div id="header" class="header">
+				<div id="heading" class="heading">
+					<h4>GRIEVANCE PORTAL|| ANAND INTERNATIONAL COLLEGE OF ENGINEERING</h4>
+					<form name="form1" method="get" action="/logout"style = "position:absolute; left:1400px; top:5px;>
+						<label class="logoutLblPos">
+						<input name="submit2" type="submit" id="submit2" value="log out">
+						</label>
+					  </form>
+					
+				</div>	
+			
+			<div id="face" class="face">
+				<nav id="nav_bar" class="nav_bar">
+					<h1>Hi,</h1>
+					<ul>             
+		               
+<li><a href="/Members/my-account"><label class="fas fa-user"></label> My Account</a></li>
+<li><a href="/Members/password_reset"><label class="fas fa-key"></label> Password Reset</a></li>
+<li><a href="/Members/Grievances" ><label class="far fa-comments"></label>My Grievances</a></li>
+
+	<a id="report" href="#!/reports"><label class="fas fa-book"></label>  Reports</a>
+	 <div class="reports">
+		                    	<ul>
+		                    		<li>Report1</li>
+		                    		<li>Report2</li>
+		                    		<li>Report3</li>
+		                    		<li>Report4</li>
+		                    	</ul>
+		                    </div>
+	                    </li>
+	                </ul>
+				</nav>
+					
+			</div>
+
+			<div class="content" >
+                    <h1>Grievance Details</h1>
+            
+                    <div class="showentries">
+                      Show <select name="entry" type="text" >
+                           <option value="10">10</option>
+                           <option value="20" >20</option>
+                           <option value="50">50</option>
+                           <option value="100">100</option>
+                       </select> Entries
+                    </div>
+                    
+                    <div class="search">
+                        Search: <input type="text" name="search">
+                    </div>
+                    
+                    <div class="content-table">
+                    <table>
+                        <tr>
+                            <td>S. No.</td>
+                            <td>Grievance No.</td>
+                           
+                            <td>Grievance Type</td>
+                            <!--<td>Date</td>-->
+                            <td>Subject</td>
+                            <td>Grievance</td>
+                            <td>Status</td>
+                            <td>Action</td>
+                        </tr>
+                        <% for(var i=0;i<result.length;i++){%>  
+                        <tr>
+                       <td><%=i%></td>
+                       <td><%=result[i].grv_id%></td>
+                       <td><%=result[i].Gtype%> </td>
+                       <td><%=result[i].subject%></td>
+                       <td><%=result[i].Grv%></td>
+                       <td><%=result[i].status%></td>
+                       <td>-</td>
+                       <td><button class="reply_button<%=i%>">reply</button></td>
+                       
+                             
+                        </tr>
+                        <%}%>
+                    </table>
+                    </div>
+                    
+                    <div class="content-table-data">
+                    
+                    
+                    </div>
+                    <div class="nav-button">
+                    <a>Previous</a>
+                    <a>Next</a>
+                    </div>
+                    <% for(var i=0;i<result.length;i++){%>  
+                    <div class="reply_form<%=i%>" style="display: none;">
+                       	<form method="POST" action="/post/reply">
+                       	<table>
+                       		<tr>
+                       			<td>id</td>
+                       			<td><input id="replyid<%=i%>" type="text" value="<%=result[i].grv_id%>" name="id"></td>
+                       		</tr>
+                       		<tr>
+                       			<td>Type reply</td>
+                       			<td><textarea   name="reply" cols="100" rows="3" data-val="true" data-val-required="The reply is required." rows="2" aria-required="true" maxlength="3000" style="border-radius: 5px;"></textarea></td>
+                       			<td><button type="submit">send reply</button></td>
+                       		</tr>
+                       	</table>
+                       </form>
+                       </div>
+                        <%}%>
+                    
+                                </div>
+				
+
+			</div>
+
+			</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+			var replyform0 = $(".reply_form0");
+	$(".reply_button0").click(function(event){
+			replyform0.fadeIn();replyform1.hide();replyform2.hide();replyform2.hide();
+
+	})
+		var replyform1 = $(".reply_form1");
+	$(".reply_button1").click(function(event){
+			replyform1.fadeIn();replyform0.hide();replyform2.hide();replyform3.hide();
+
+	})
+		var replyform2 = $(".reply_form2");
+	$(".reply_button2").click(function(event){
+			replyform2.fadeIn();replyform0.hide();replyform1.hide();replyform3.hide();
+
+	})
+		var replyform3 = $(".reply_form3");
+	$(".reply_button3").click(function(event){
+			replyform3.fadeIn();replyform0.hide();replyform1.hide();replyform2.hide();
+
+	})
+		
+	
+})
+</script>
+	</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="HandheldFriendly" content="true">
+		<title>Dashboard</title>
+		<script type="text/javascript" src="/javascripts/jquery.js"></script>
+		<script type="text/javascript" src="/s/ds.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script type="text/javascript" src="/s/angular-route.min.js"></script>
+		<script type="text/javascript" src="/s/dash.js"></script>
+		<!--<script type="text/javascript" src="/s/controllers.js"></script>-->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/s/dash-grievances.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-myaccount.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-reset-password.css">
+		<link rel="stylesheet" type="text/css" href="/s/dash-post.css">
+	</head>
+	<body ng-app="grievances">
+
+		<div id="total" class="total">
+
+			<div id="header" class="header">
+				<div id="heading" class="heading">
+					<h4>GRIEVANCE PORTAL || ANAND INTERNATIONAL COLLEGE OF ENGINEERING</h4>
+				</div>
+				<a class="a"><img src="../images/logout.png" style="height: 30px;width: 30px; border-radius: 20px;margin-top: 10px;"></a>
+
+				<!--<div class="arrow_up"></div>-->
+				<div class="logout">
+					<form action="/logout">
+						<!--<input type="text" value="Mohit Bansal" style="border:none;max-width: 80%;margin-left: 10%;" />
+						<input type="mail" style="border:none;max-width: 80%;margin-left: 10%;" /><br>
+						-->
+						<input type="submit" value="logout" name="" class="logout_btn" style="width: 80%;">
+					</form>
+			</div>
+			
+			<div id="face" class="face">
+				<nav id="nav_bar" class="nav_bar">
+					<h1>Hi,</h1>
+					<ul>               
+							<li><a href="/Members/my-account"><label class="fas fa-user"></label> My Account</a></li>
+						    <li><a href="/Members/password_reset"><label class="fas fa-key"></label> Password Reset</a></li>
+							<li><a href="/Members/Grievances" ><label class="far fa-comments"></label>My Grievances</a></li>
+							
+							<a id="report" href="#!/reports"><label class="fas fa-book"></label>  Reports</a>
+						  <div class="reports">
+		                    	<ul>
+		                    		<li>Report1</li>
+		                    		<li>Report2</li>
+		                    		<li>Report3</li>
+		                    		<li>Report4</li>
+		                    	</ul>
+		                    </div>
+	                    </li>
+	                </ul>
+				</nav>
+					
+			</div>
+
+			<div class="content" >
+                    <h1>Edit Grievance Cell Member</h1>
+                    <form method="POST" action="/Members/update">
+                        <div class="details">
+                            <table>
+                                <tr>
+                                    <td>Name</td>
+                                    <td><input type="text" name="name" value="<%=name%>" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Designation</td>
+                                    <td><input type="text" name="designation" value="<%=designation%>" readonly></td>
+                                </tr>
+                                <tr>
+                                    <td>Is Management</td>
+                                    <td><input type="checkbox" name="type" onclick="return false"></td>
+                                </tr>
+                                <tr>
+                                    <td>Grievance Types</td>
+                                    <td>
+                                        <input name="grievance-type" type="text" value="<%=gtype%>" readonly>
+                                              
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Email Id</td>
+                                    <td><input type="text" name="emailid" value="<%=email%>" ></td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile Number</td>
+                                    <td><input type="text" name="mobileno" value="<%=mobile%>" ></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><button type="submit" id="member-details">Update</button></td>
+                                </tr>
+                            </table>
+                
+                        </div>
+                    </form>
+				
+
+			</div>
+
+			</div>
+
+	</body>
+
+</html>

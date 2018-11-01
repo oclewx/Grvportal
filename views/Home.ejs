@@ -1,0 +1,28 @@
+<h1><%= title%> HomePage!!</h1>
+
+<div class="form-group">
+    <form  action="/<%= title%>/dashboard">
+        <button type="submit">Dashboard</button>
+    </form>
+    <div class="form-group">
+        <form  action="/<%= title%>/update">
+            <button type="submit">Update</button>
+        </form>
+        <div class="form-group">
+                <%if (verify==0) { %>
+            <form  action="/<%= title%>/send">
+                <button type="submit">Verify Email</button>
+            </form>
+            <% } %>
+            <form  action="/<%= title%>/complaint">
+                <button type="submit">Post grievance</button>
+            </form>
+            <div class="form-group">
+                <form  action="/logout">
+                    <button type="submit">Log Out</button>
+                </form>
+                <div class="form-group">
+                        <form  action="/<%= title%>/password_reset">
+                            <button type="submit">Passwor reset</button>
+                        </form>
+                        

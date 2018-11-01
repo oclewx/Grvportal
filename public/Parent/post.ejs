@@ -1,0 +1,54 @@
+				
+				<h1>Post a Grievance</h1>
+
+                <form ng-submit="GrvPost()" ng-app="grievances" ng-controller="Parent">
+                <table>
+                    <tr>
+                        <td>
+                            Grevience Type
+                        </td>
+                        <td id="ip">
+                            <select class="chosen" ng-model="Gtype" style="border-radius: 4px; height: 2rem;">
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>D</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr >
+                        <td>
+                            Subject
+                        </td>
+                        <td id="ip">
+                            <textarea class="form-control" ng-model="subject" cols="100" rows="2" data-val="true" data-val-required="The Description field is required." id="PostedDetails" name="PostedDetails" rows="2" aria-required="true" maxlength="200" style="border-radius: 5px;"></textarea>
+                            <span>(max 200 characters)</span>
+                        </td>
+                    </tr>
+                    <tr><td>
+                        Descripton
+                    </td>
+                    <td id="ip">
+                        <textarea class="form-control" ng-model="Desc" cols="100" rows="3" data-val="true" data-val-required="The Description field is required." id="PostedDetails" name="PostedDetails" rows="2" aria-required="true" maxlength="3000" style="border-radius: 5px;"></textarea>
+                        <span>(max 3000 characters)</span>
+                       </td>
+                    </tr>
+                    <tr>
+                        <td><br>
+                            Files
+                        </td>
+                        <td id="ip">
+                            <input class="form-control" ng-model="file" id="filecount" multiple="true"  style="color:Gray" type="file" value="" >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br>
+                            Submit
+                        </td>
+                        <td id="ip">
+                            <input id="submit" type="submit" name="" value="submit" >
+                        </td>
+                    </tr>
+                </table>
+                  </form>
+    

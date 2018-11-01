@@ -1,0 +1,8 @@
+<% for(var i=0;i<result.length;i++){%>  
+        <form method="get" action="/post/grv_action">
+         <h1><%= result[i].Grv%></h1>
+         <input type="hidden", name="id",value="<%= result[i].grv_id%>">
+        <button type="submit" name="action" value="viewed">view</button>
+        <span id = "status"></span>        
+</form>    
+        <%}%>

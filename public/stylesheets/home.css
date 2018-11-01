@@ -1,0 +1,376 @@
+* {
+  font-size: 100%;
+}
+
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  margin: 0;
+  padding: 0;
+   }
+
+.image {
+  height: 100vh;
+  background: url(c.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  object-fit: cover; }
+
+.heading {
+  width: 74%;
+  position: absolute;
+  top: 3rem;
+  height: 90%;
+  text-align: center;
+  animation-name: heading;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; }
+
+@keyframes heading {
+  0% {
+    opacity: 0;
+    transform: scale(1.2) translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0rem); } }
+.heading img {
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+  float: left; }
+ .heading h1{
+ 	color: #000000;
+ 	font-size: 1.5rem;
+ 	font-weight: normal;
+ 	letter-spacing: .1rem;
+ }
+
+.forms {
+  margin: 0 auto;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+  background-color: rgb(0,0,0,0.5);
+  width: 40%;
+  border-radius: 1rem;
+  box-shadow: .5rem .5rem 1rem #0d6303;
+  opacity: 0;
+  animation-name: forms;
+  animation-duration: 100ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; }
+
+@keyframes forms {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+.fa {
+  color: white;
+  font-size: 1.5rem;
+  display: block;
+  float: right;
+  padding-right: 1rem;
+  text-decoration: none; }
+
+.icons span {
+  float: right;
+  color: white;
+  margin-right: 2rem;
+  font-size: 1rem; }
+
+.under-dot:after {
+  content: "";
+  /* This is necessary for the pseudo element to work. */
+  display: block;
+  /* This will put the pseudo element on its own line. */
+  margin: 0 auto;
+  /* This will center the border. */
+  width: .3rem;
+  /* Change this to whatever width you want. */
+  padding: 0rem;
+  /* This creates some space between the element and the border. */
+  height: .3rem;
+  margin-top: .2rem;
+  background-color: white;
+  opacity: 1;
+  border-radius: 50%;
+  transition: 1s; }
+
+.head {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: auto;
+  padding: .4rem;
+  background-color: rgba(0,0,0,0.5);
+  transition: .5s;
+  width: 100%;
+  transform-origin: top center;
+  animation-name: navbar;
+  animation-delay: 0;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out; }
+
+@keyframes navbar {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg); }
+  30% {
+    opacity: 1; }
+  60% {
+    transform: rotateX(20deg); }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg); } }
+#head a {
+  font-size: 1.2rem;
+  font-weight: 20;
+  text-decoration: none;
+  color: white;
+  float: left;
+  margin-left: 2rem;
+  cursor: pointer;
+  opacity: 1;
+  transition: 1s; }
+
+#head i {
+  display: none; }
+
+.headcolor{
+  background-color: rgba(0,0,0,0.7);
+}
+
+.info h1 {
+  color: black;
+  text-align: center; }
+
+.options {
+  border-left: 0.2rem solid rgba(255, 255, 255, 0.3);
+  margin-top: 0;
+  height: 100%;
+  width: 25%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+  overflow: visible;
+  display: block;
+  opacity: 1;
+}
+
+.options li {
+  background-color: transparent;
+  padding-left: 1.5rem;
+  padding-top: .2rem;
+  padding-bottom: .2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  font-weight: 30;
+  letter-spacing: .1rem;
+  color: white;
+  width: 90%;
+  overflow: visible;
+  opacity: 0;
+  transition: all .1s ease-in-out;
+  transform-origin: top center;
+  perspective: 70rem; }
+  .options li:nth-child(1) {
+    animation-name: lists;
+    animation-iteration-count: 1;
+    animation-duration: 500ms;
+    animation-delay: -150ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
+  .options li:nth-child(2) {
+    animation-name: lists;
+    animation-iteration-count: 1;
+    animation-duration: 500ms;
+    animation-delay: 0ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
+  .options li:nth-child(3) {
+    animation-name: lists;
+    animation-iteration-count: 1;
+    animation-duration: 500ms;
+    animation-delay: 150ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
+  .options li:nth-child(4) {
+    animation-name: lists;
+    animation-iteration-count: 1;
+    animation-duration: 500ms;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
+  .options li:nth-child(5) {
+    animation-name: lists;
+    animation-iteration-count: 1;
+    animation-duration: 500ms;
+    animation-delay: 450ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
+  .options li:nth-child(6) {
+    animation-name: lists;
+    animation-iteration-count: 1;
+    animation-duration: 500ms;
+    animation-delay: 600ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
+  .options li:nth-child(7) {
+    animation-name: lists;
+    animation-iteration-count: 1;
+    animation-duration: 500ms;
+    animation-delay: 750ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; }
+
+@keyframes lists {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem); } }
+.options li:hover {
+  padding-left: 0.5rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border-bottom: .2rem solid white }
+
+.options ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  margin-top: 5rem;
+  list-style-type: none; }
+
+/* Style the active class, and buttons on mouse-over */
+.a {
+  padding-left: 0.5rem !important;
+  cursor: default !important;
+  font-size: 1.5rem !important;
+  border-bottom: .2rem solid white;
+}
+
+iframe {
+  width: 100%;
+  height: 20rem;
+  border: 0;
+  frameborder: 0; }
+
+.login-register {
+  margin: 0 auto;
+  width: 80%;
+  font-size: .8rem;
+  color: white; }
+
+.login-register a {
+  color: white;
+  cursor: pointer; }
+
+.login-register h3 {
+  text-align: left; }
+
+input[type=text], input[type=password], input[type=File], input[type=number] {
+  width: 95%;
+  padding: .3rem .5rem;
+  margin: .4rem .6rem;
+  text-align: left;
+  display: inline-block;
+  border: .1rem solid #ccc;
+  box-sizing: border-box;
+  font-size: 1rem;
+  border-radius: 5rem; }
+
+input[type=File] {
+  border-radius: 0; }
+
+#imag {
+  margin-left: 1.5em;
+  float: left; }
+
+button {
+  background-color: blue;
+  opacity: 1;
+  color: white;
+  outline: none;
+  text-align: center;
+  border: 0;
+  width: 92%;
+  font-size: 1.2rem;
+  padding: .3rem .5rem;
+  margin-top: .8em; }
+
+button:hover {
+  background-color: #578de5;
+  opacity: 1;
+  cursor: pointer; }
+
+#check {
+  margin-left: 1.5em;
+  margin-top: 1em; }
+
+.login a {
+  font-size: 1em;
+  float: right; }
+
+.information {
+  width: 85%;
+  padding-left: 10%;
+  line-height: 1.5rem;
+  margin-bottom: 5rem; }
+
+.open {
+  display: none; }
+
+.fa-arrow-up{
+  color: blue;
+  border: .1rem solid blue;
+  padding: .8rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 2rem;
+  font-weight: normal;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+}
+.fa-arrow-up:hover{
+  background-color: blue;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .hide {
+    display: none; }
+
+  .open {
+    display: block;
+    color: white;
+    font-size: 1rem;
+    padding: 0;
+    cursor: pointer; }
+
+  .options {
+    display: none;
+    width: 100%; }
+
+  .options li {
+    font-size: .5rem;
+    margin: 0; }
+
+  .options ul {
+    margin-top: 3rem; }
+
+  .heading {
+    width: 100%; }
+
+  .heading img {
+    height: 20%; } }
+
+/*# sourceMappingURL=home.css.map */

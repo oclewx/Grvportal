@@ -1,0 +1,40 @@
+   <html>
+   <head>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script>
+    var createMember = angular.module('createMember', []);
+
+    createMember.controller('MainCtrl', function ($scope,$http) {
+
+        $http.get("/Admin/grievance_type",{usertype:"Admin"}).then(function(response)
+            {
+                $scope.grievance_type=response.data;
+            });
+
+
+      });
+  </script>
+</head>
+<body>
+<div ng-app="createMember" ng-controller="MainCtrl">
+<form method='post' action="/Admin/create">
+    <input type="text" placeholder="Enter name" name="name"/>
+    <input type="text" placeholder="Enter Designation" name="Des"/>
+
+    enter Gtype  : * use ctrl to select multiple entries.
+    <select name="gtype" type="number" multiple>
+       <option ng-repeat="obj in grievance_type" value="{{obj.seq}}">{{obj.grvtype}}</option>    
+        </select> 
+
+
+    <input type="checkbox" name="mngmnt" >is Management 
+    <input type="text" placeholder="Enter Email" name="email"/>
+    <input type="text" placeholder="Enter mobile no." name="mobile"/>
+    <button type="submit">create</button>
+</form>
+</div>
+
+</body>
+</html>
+

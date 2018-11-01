@@ -1,0 +1,37 @@
+<%if(type=='approved'){%>
+    <h1>Approved List</h1>
+<% for(var i=0;i<result.length;i++){%>  
+<form action="/Admin/existing_request">
+ <h1><%= result[i].emailid%></h1>
+ <input type="hidden" value="<%=result[i].emailid%>" name="email"></input>
+ <input type="hidden" value="<%=user%>" name="user"></input>
+    
+<button type="submit" value="0" name="status" >deactivate</button>
+</form>    
+<%}%>
+<%}%>
+<%if(type=='verified'){%>
+<h1>Pending List</h1>
+<h1><%= user%></h1>    
+<% for(var i=0;i<result.length;i++){%>
+    <form action="/Admin/Pending_user">
+     <h1><%= result[i].emailid%></h1>
+     <input type="hidden" value="<%=result[i].emailid%>" name="email"></input>
+     <input type="hidden" value="<%=user%>" name="user"></input>
+     <button type="submit" value="1" name="status" >approve</button>
+    <button type="submit" value="0" name="status" >reject</button>
+    </form>    
+    <%}%>
+    <%}%>
+    <%if(type=='rejected'){%>
+        <h1>Rejected List</h1>
+        <h1><%= user%></h1> 
+        <% for(var i=0;i<result.length;i++){%>
+        <form action="/Admin/existing_request">
+         <h1><%= result[i].emailid%></h1>
+         <input type="hidden" value="<%=result[i].emailid%>" name="email"></input>
+         <input type="hidden" value="<%=user%>" name="user"></input>    
+        <button type="submit" value="1" name="status">activate again</button>
+        </form>    
+        <%}%>
+        <%}%>

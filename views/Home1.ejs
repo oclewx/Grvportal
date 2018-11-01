@@ -1,0 +1,9 @@
+<h1><%= title%> HomePage!!</h1>
+<h1>Login Successful</h1>
+<form action='/logout'>
+    <button type="submit">Logout</button>
+</form>
+<form action='/<%=title%>/Grievances'>
+    <input type="hidden" value="<%= Gtype%>" name="Gtype" > 
+    <button type="submit">Grievances</button>
+</form>
