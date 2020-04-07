@@ -3,11 +3,11 @@ This tool can be used to convert the nested functions into a source file which w
 
 ## This tool is tested on 
 llvm version 11.0.0
-clang version 11.0.0
+and clang version 11.0.0
 
-Note:- this tool will not work on llvm version 9.0.0
+Note:- this tool will not work on llvm version 9.0.1
 
-##Installation guide
+## Installation guide
 1.  Go to llvm source directory (in my case it is llvm-project)
 2. Now you can directly copy the folder exeucte-nested-function in clang-tools-extra directory
 
