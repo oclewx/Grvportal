@@ -1,6 +1,6 @@
 # Implementation of Nested Functions for C Programs
 This tool can be used to convert the nested functions into a source file which will behave as executing nested function in C language.
-
+-------------------------------------------------------------------------------------------------------------------------
 ## This tool is tested on 
 llvm version 11.0.0
 and clang version 11.0.0
@@ -21,7 +21,7 @@ echo 'add_subdirectory(execute-nested-function)' >>clang-tools-extra/CMakeLists.
 ninja
 ```
 Note:- building tool may be different in your case
-
+***************************************************************************************************************************
 
 
 ## Running test cases
@@ -34,21 +34,21 @@ make
 ```
 
 Now you can see test cases and modified test cases files , modified test cases files are the converted ones.
-
+***********************************************************************************************************************
 ### Some Questions
-**Q1.** does my implementation handle recursively nested function blocks?
+**Q1.** does my implementation handle recursively nested function blocks?\\
 **Answer:** Yes
 
-**Q2.** Does my asst handle structs that are locally defined (i.e. defined inside the function)?
+**Q2.** Does my asst handle structs that are locally defined (i.e. defined inside the function)? \\
 **Answer:** Yes
 
-**Q3.** Does my code handle the case where we have global and local var with same name and that is captured in nested function ?
+**Q3.** Does my code handle the case where we have global and local var with same name and that is captured in nested function ? \\
 **Answer:** Yes
 
-**Q4.** Do I pass all the variables to every closure or only the captured vars?
+**Q4.** Do I pass all the variables to every closure or only the captured vars?\\
 **Answer:** Only the captured vars.
 
-**Q5.** Can you handle multiple closures in same/different functions (not necessarily nested)?
+**Q5.** Can you handle multiple closures in same/different functions (not necessarily nested)?\\
 **Answer:** Yes
 
 **Q6.** Do I explicitly pass global vars to the closure as well?
